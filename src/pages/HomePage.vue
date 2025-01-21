@@ -255,6 +255,9 @@ p {
   .margin-div {
     margin: 100px 20px;
   }
+  .what-can-i-do-text {
+    margin: 30px 20px;
+  }
 }
 @media (max-width: 375px) {
   li {
