@@ -17,7 +17,7 @@
             class="icons"
         /></a>
       </div>
-      <a href="#" class="button"> Download CV </a>
+      <a href="#" class="button" @click="downloadCV"> Download CV </a>
     </section>
     <section class="my-works" id="projects">
       <div class="my-works-container">
@@ -120,7 +120,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    downloadCV() {
+      const link = document.createElement('a');
+      link.href = '/FRONT-END-Pedro-Otavio-Curriculo.pdf'; // Caminho para o arquivo PDF no diretório public
+      link.download = 'FRONT-END-Pedro-Otavio-Curriculo.pdf'; // Nome do arquivo a ser baixado
+      link.click(); // Simula o clique para iniciar o download
+    }
+  }
+};
 </script>
 
 <style scoped>
@@ -158,6 +167,10 @@ export default {};
   border-radius: 8px;
   justify-self: center;
   white-space: nowrap;
+}
+.button:hover, .icons:hover {
+  transition: transform 0.2s ease;
+  transform: scale(1.02)
 }
 .my-works {
   margin-top: 350px;
