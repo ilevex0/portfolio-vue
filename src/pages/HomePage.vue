@@ -250,6 +250,13 @@ p {
   .title-center{
     font-size: 6.5vw;
   }
+  .icons {
+    max-width: 12vw;
+  }
+  .button {
+    font-size: 4.5vw;
+    padding: 5vw;
+  }
 }
 @media (max-width: 425px) {
   .margin-div {
