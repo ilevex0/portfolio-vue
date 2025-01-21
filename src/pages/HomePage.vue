@@ -28,7 +28,15 @@
               alt="Shopping Website made with Vue.js."
               class="img-projects"
           /></a>
-          <p class="project-text">Mercadinho-vue</p>
+          <div class="project-name-links-container">
+            <p class="project-text">Mercadinho-vue</p>
+            <a href="https://github.com/ilevex0/mercadinho-vue" target="_blank"
+              ><img
+                src="@/assets/imgs/icone-github.png"
+                alt="Linkedin icon"
+                class="icon-project"
+            /></a>
+          </div>
         </div>
         <div class="project">
           <a href="#"
@@ -137,6 +145,7 @@ export default {};
 }
 .title-center {
   justify-self: center;
+  white-space: nowrap;
 }
 .button {
   display: block;
@@ -148,6 +157,7 @@ export default {};
   background-color: black;
   border-radius: 8px;
   justify-self: center;
+  white-space: nowrap;
 }
 .my-works {
   margin-top: 350px;
@@ -164,6 +174,14 @@ export default {};
   align-items: center;
   flex-direction: column;
   gap: 30px;
+}
+.project-name-links-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.icon-project {
+  max-width: 44px;
 }
 .img-projects {
   width: 100%;
@@ -226,6 +244,21 @@ p {
 @media (max-width: 600px) {
   .what-can-i-do-text {
     text-align: start;
+  }
+}
+@media (max-width: 535px) {
+  .title-center{
+    font-size: 6.5vw;
+  }
+}
+@media (max-width: 425px) {
+  .margin-div {
+    margin: 100px 20px;
+  }
+}
+@media (max-width: 375px) {
+  li {
+    font-size: 18px;
   }
 }
 </style>

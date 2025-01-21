@@ -1,18 +1,32 @@
 <template>
   <nav>
-    <a href="#home" class="logo">P.</a>
+    <a href="#home" @click="scrollTo($event, 'home')" class="logo">P.</a>
     <div class="nav-items">
-      <a href="#home">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#home" @click="scrollTo($event, 'home')">Home</a>
+      <a href="#projects" @click="scrollTo($event, 'projects')">Projects</a>
+      <a href="#skills" @click="scrollTo($event, 'skills')">Skills</a>
+      <a href="#contact" @click="scrollTo($event, 'contact')">Contact</a>
     </div>
   </nav>
   <div class="nav-detail"></div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    scrollTo(event, targetId) {
+      event.preventDefault();
+
+      const offset = 200;
+
+      const element = document.getElementById(targetId);
+      window.scrollTo({
+        top: element.offsetTop - offset,
+        behavior: 'smooth'
+      })
+    }
+  }
+};
 </script>
 
 <style scoped>
